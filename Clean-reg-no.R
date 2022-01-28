@@ -14,7 +14,7 @@ ch_reg_no_fix <- function(col) {
     }
     }
   )
-  col <- ifelse(grepl("^[ACFGILNOPRSZ0-9]{1}[ACEFGILOPRSZ0-9]{1}[0-9]{6}", col),
+  col <- ifelse(grepl("(^[0-9]{8}$)|^(AC|E[SN]|FC|G[ENS]|I[CP]|LP|N[ACFILOPTVZ]|OC|S[ACEFILOPRZ]|R[0C]|ZC)[0-9]{6}$", col),
               col,
               NA
   )
